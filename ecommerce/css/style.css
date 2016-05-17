@@ -1,0 +1,103 @@
+ul.news{
+    width: 640px;
+    position: absolute;
+    bottom: 120px;
+    right: 350px;
+    perspective: 500px;
+}
+
+li.connect, li.inscrire{
+ height:65px;
+}
+
+
+ul.news li{
+    display: inline-block;
+    width: 120px;
+    height: 173px;
+    position: relative;
+    z-index: 50;
+    margin-right: -2px;
+    background: #0b6dba;
+    width: 112px;
+    transform: rotateY(45deg);
+    transition: all .45s;
+    color: white;
+    text-align: center;
+}
+
+a.prix{
+    display: inline-block;
+    width: 120px;
+    height: 22px;
+    bottom: -5px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 25px aqua;
+    position: relative;
+    z-index: 50;
+    margin-right: -2px;
+    background: black;
+    width: 112px;
+    transform: rotateY(45deg);
+    transition: all .45s;
+    color: white;
+    text-align: center;
+}
+
+/* l'élément survolé */
+a.prix:hover{
+}
+
+/* l'element central */
+ul.news li:nth-child(3){
+    transform: rotateY(0deg) scale(1.2);
+    z-index: 55;
+}
+/* les elements qui suivent l'element central */
+ul.news li:nth-child(3) ~ li{
+    transform: rotateY(-45deg);
+}
+
+/* l'élément survolé */
+ul.news li:hover{
+    transform: rotateY(0deg) scale(1.2);
+}
+
+/* les elements qui suivent l'element survole */
+ul.news li:hover ~ li{
+    transform: rotateY(-45deg);
+}
+
+/* les éléments survolés */
+ul.news li:hover, ul.news li:nth-child(3) ~ li:hover{
+    transform: rotateY(0deg) scale(1.2);
+}
+
+/* les elements non survoles, lors du survol du parent */
+ul.news:hover li:not(:hover){
+    transform: rotateY(45deg);
+}
+
+/* les elements qui suivent l'element survole */
+ul.news:hover li:hover ~ li{
+    transform: rotateY(-45deg);
+}
+
+/* les elements pairs */
+ul.news li:nth-child(odd){
+    background: #0c7cd5;
+}
+
+/* z-index du premier et dernier element (derrière) */
+ul.news li:first-child, ul.news li:last-child{
+    z-index: 45;
+}
+
+/* les éléments survolés */
+ul.news li:hover, ul.news li:first-child:hover, ul.news li:nth-child(3) ~ li:hover{
+    z-index: 60;
+}
+
+body{
+    background-color: #D0D0D0;
+}
