@@ -1,4 +1,4 @@
-<?php 
+<?php
     header('Content-type: text/html; charset=iso-8859-1');
     require_once 'inc/db.php';
     require_once 'inc/functions.php';
@@ -34,7 +34,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://smartstoresio.esy.es"><b>Smart Store</b></a>
+          <a class="navbar-brand" href="http://localhost/E4/JEAN-CHARLES/smartstore/smartstore/ecommerce/"><b>Smart Store</b></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -49,13 +49,13 @@
                 <li><a href="contact.php">Nous contacter</a></li>
             <?php endif; ?>
           </ul>
-          
+
           <ul id="panier" class="panier">
             <a href="panier.php" style="text-decoration:none"><img title="Panier" alt="Panier" width="40px" height="40px" src="Images/panier.png" /><span style="color:gold">Mon panier</span></a>
             <li class="items">
                 <b>ITEMS</b>
                  <?php
-                
+
                 //compter elements dans panier
                 $panier_count = 0;
                 if (isset($_SESSION["panier"]))
@@ -75,7 +75,7 @@
     </nav>
 
     <div class="container">
-    
+
     <?php if(isset($_SESSION['flash'])): ?>
         <?php foreach($_SESSION['flash'] as $type => $message): ?>
             <div class="alert alert-<?= $type; ?>">
